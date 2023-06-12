@@ -1,0 +1,964 @@
+/* <-=====================Root css ====================-> */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* <================  BODY CSS  ======================> */
+body,
+html {
+    background: #080808;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    background-image: url("images/foreground1.png");
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    /* position: relative; */
+    scroll-behavior: smooth;
+
+}
+
+
+/* <================  header container  ======================> */
+.container {
+    margin-top: 5px;
+}
+
+
+
+/* <================  nav-bar  ======================> */
+.nav-bar {
+    /* background-color: white; */
+    display: flex;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+
+/* <================  navbar logo img ======================> */
+.nav-bar .logo img {
+    width: 100px;
+}
+
+
+
+/* <================ navbar ul ======================> */
+.nav-bar .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.nav-bar .menu ul li {
+    margin: 0 25px;
+}
+
+/* <================ navbar  ul a  ======================> */
+.nav-bar .menu ul a {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: medium;
+    padding: 10px 0px;
+    transition: all .2s linear;
+}
+
+.nav-bar .menu ul a::after {
+    transition: all .5s linear;
+    content: "";
+    display: block;
+    align-items: center;
+    height: 2px;
+    background-color: #dd092c;
+    width: 0;
+
+}
+
+.nav-bar .menu ul a:hover:after {
+
+    width: 100%;
+}
+
+
+
+
+
+/* <================ navbar  menu ul close  ======================> */
+.nav-bar .menu ul .close {
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+
+
+/* <================ navbar hamburger ======================> */
+.nav-bar .hamburger {
+    line-height: 6px;
+    margin-bottom: 18px;
+    display: none;
+    cursor: pointer;
+}
+
+
+/* <================ introduction ======================> */
+.introduction {
+    /* background-color: red; */
+    font-weight: 500;
+    letter-spacing: 1px;
+    width: fit-content;
+    margin-top: 20%;
+    margin-left: 10%;
+    line-height: 40px;
+    height: 70%
+}
+
+/* <================ introduction span ======================> */
+.introduction span {
+
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+
+/* <================ introduction span name ======================> */
+.introduction #name {
+    color: #dd092c;
+}
+
+
+/* <================ screen size 1000px  ======================> */
+@media only screen and (max-width:1000px) {
+
+    /* <-------------   nav bar ---------------------------------------> */
+    .nav-bar {
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* <================ screen size 900px  ======================> */
+@media only screen and (max-width:900px) {
+    .nav-bar .hamburger {
+        display: block;
+
+    }
+
+    /* <------------  nav menu --------------------------------> */
+    .nav-bar .menu {
+        width: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #dd092c;
+        transition: all .5s;
+        overflow: hidden;
+
+    }
+
+    /* <----------------  nav-bar active  -------------------------> */
+    .nav-bar .active {
+        width: 50%;
+    }
+
+
+    /* <--------------  nav-bar menu ul ------------------------>  */
+    .nav-bar .menu ul {
+        transition: all .5s;
+        margin: 0 auto auto 0;
+        padding: 0;
+        height: 60%;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    /* <---------------- nav-bar menu  ul close -----------------------> */
+    .nav-bar .menu ul .close {
+        display: block;
+    }
+
+
+    /* <------------------    nav-bar menu  ul a -------------------------> */
+    .nav-bar .menu ul a {
+        letter-spacing: 1px;
+    }
+
+
+}
+
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/*/* <===============    about   ======================> */
+.about {
+    /* height:100px; */
+    background-color: #080808;
+    ;
+    margin: 0 1px 0 0px;
+    padding: 20px 0;
+    padding-bottom: 150px;
+    width: 100%;
+    color: whitesmoke;
+
+}
+
+
+
+/* <================    about about-me   ======================> */
+.about .about-me {
+    display: grid;
+    padding: 0 20px;
+
+    grid-template-columns: 1fr 2fr auto;
+
+
+}
+
+
+/* <================    about about-me my-img  ======================> */
+.about .about-me .my-img {
+
+    /* align-self: center; */
+    justify-self: center;
+    /* background-color: #dd092c; */
+    margin: 15px;
+
+}
+
+/* <================  about about-me my-img img  ======================> */
+.about .about-me .my-img img {
+
+    width: 400px;
+    border-radius: 15px;
+}
+
+
+/* <================    about about-me  about-text  ======================> */
+.about .about-me .aboutme-text {
+    justify-self: center;
+
+    margin: 15px;
+    padding: 10px 30px 0px 10px;
+}
+
+
+/* <================    about about-me  about-text about-title  ======================> */
+.aboutme-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: white;
+
+}
+
+
+
+/* <================    about about-me  about-text aboutme-content  ======================> */
+.about .about-me .aboutme-text .aboutme-content {
+    font-family: cursive;
+    word-spacing: 5px;
+    line-height: 29px;
+    opacity: .9;
+}
+
+
+/* <================    about about-me  info-title-container  ======================> */
+.about .about-me .aboutme-text .info-title-container {
+    padding: 25px 0px;
+}
+
+
+
+/* <================    about about-me  about-text  info-title-container ul  ======================> */
+.about .about-me .aboutme-text .info-title-container ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-between;
+
+}
+
+
+/* <================    about about-me  about-text  info-title-container ul span ======================> */
+.about .about-me .aboutme-text .info-title-container ul span {
+    color: white;
+    transition: .5s ease;
+    cursor: pointer;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+
+
+}
+
+.about .about-me .aboutme-text .info-title-container ul span:hover {
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.about .about-me .aboutme-text .info-title-container ul span::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    padding: 0;
+    background-color: #dd092c;
+    transition: all .3s;
+}
+
+.about .about-me .aboutme-text .info-title-container ul .info-title::after {
+    width: 50%;
+}
+
+.about .about-me .aboutme-text .info-title-container ul span:hover::after {
+    width: 100%;
+}
+
+
+/* <================    about about-me  about-text  info-sect ======================> */
+.about .about-me .aboutme-text .info-sect {
+    font-size: small;
+
+}
+
+
+
+/* <================    about about-me  about-text  info-sect  p ======================> */
+.about .about-me .aboutme-text .info-sect p {
+    color: hsl(350, 68%, 43%);
+    padding-bottom: 5px;
+
+}
+
+
+/* <================    class created to hide  skill education and  expericene tab ======================> */
+
+.display {
+    display: none;
+}
+
+/* .about .about-me .aboutme-text .info-title-container ul span::after{
+    width:30%;
+} */
+
+
+
+
+
+/* <================ screen size 1100px  ======================> */
+@media only screen and (max-width:1100px) {
+
+    .about {
+        width: 100%;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .about .about-me {
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .about .about-me .my-img img {
+        width: 320px;
+    }
+
+    .about .about-me .aboutme-text {
+        background-color: #080808
+    }
+
+    .about .about-me .aboutme-text .info-title-container ul span {
+        margin-right: 15px;
+    }
+
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+.Myservices {
+    background-color: #080808;
+    width: 100%;
+}
+
+.Myservices .container {
+    margin-top: 0;
+    padding: 10%;
+    /* background-color:grey; */
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+
+    width: 80%;
+    /* background-color: red; */
+}
+
+.Myservices .container .aboutme-title {
+    padding-bottom: 35px;
+}
+
+.Myservices .Services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+
+
+}
+
+.Myservices .Services>.grid {
+
+    border-radius: 10px;
+    padding: 20px;
+    /* width: 240px; */
+    background-color: rgb(32, 30, 30);
+    aspect-ratio: 1 / .9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: all .2s linear;
+}
+
+.Myservices .Services>.grid:hover {
+    background-color: #db0b2e;
+    transform: translate(0, -5px);
+}
+
+.Myservices .Services>.grid>span {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.Myservices .Services>.grid p {
+    font-size: 11px;
+    line-height: 14px;
+    word-spacing: 2px;
+    letter-spacing: .5px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* ========================================= MY work======================================== */
+
+
+.Mywork {
+    background-color: #080808;
+    width: 100%;
+
+}
+
+.Mywork .container {
+    margin-top: 0;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.content {
+    width: 80%;
+}
+
+.Mywork .container .aboutme-title {
+    padding-bottom: 35px;
+}
+
+.Mywork .Services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+
+}
+
+.Mywork .Services>.grid>div {
+
+    background-color: rgb(32, 30, 30);
+    aspect-ratio: 1 / 1.3;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.Mywork .Services>.grid>div>img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: -3px;
+    border-radius: 10px;
+}
+
+
+
+
+.Mywork .Services>.grid>div>div>p {
+    font-size: small;
+
+    padding-bottom: 10px;
+}
+
+
+.Mywork .Services>.grid>div::after {
+
+    display: block;
+    content: "";
+    width: 100%;
+
+}
+
+
+
+.Mywork .Services>.grid>div:hover:after {
+    height: 100%;
+    transition: all .2s;
+    background: linear-gradient(to top, rgba(219, 11, 46, 1), rgba(219, 11, 46, 1), rgba(0, 0, 0, .5));
+    transform-origin: bottom;
+    transform: scaley(1.95);
+
+
+
+}
+
+#circle {
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid white;
+
+}
+
+
+/* background:linear-gradient(rgba(255,0,0,1),rgba(255,255,255,0)); */
+
+
+.Mywork .Services>.grid>div>.work-link-1 {
+
+    transition: all .5s;
+    /* color:#080808; */
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    /* background-color: yellow; */
+    bottom: -50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    /* display: none; */
+
+}
+
+.Mywork i {
+    color: #fff;
+}
+
+#work-btn1 {
+    margin: 5%;
+    background-color: transparent;
+    color: #fff;
+    border-color: #dd092c;
+    border-width: 1px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    margin-bottom: 8%;
+
+}
+
+#work-btn1:hover {
+    transform: translate(0, 2px);
+    box-shadow: 0px 7px 30px rgba(255, 0, 0, .6);
+}
+
+
+/* ==================================  Contac Me  ==========================================================================> */
+
+#contact {
+    width: 100%;
+    background-color: #080808;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+
+}
+
+#contact .container {
+    width: 100%;
+    padding: 8% 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contact .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: auto;
+    padding: 1%;
+    transition: all .3s;
+}
+
+
+/* ---------------------- contact  contact side --------------> */
+#contact .container .content .contact-side {
+    flex-basis: 350px;
+    padding: 1%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    padding-bottom: 6%;
+}
+
+
+#contact .contact-me-title {
+    padding: 0px;
+    margin: 0px;
+    color: white
+}
+
+#contact i {
+    color: #db0b2e;
+}
+
+#social i {
+    color: #fff
+}
+
+.download-btn {
+    width: fit-content;
+    background-color: #db0b2e;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    transform: translate(0, 2px);
+}
+
+/* ----------------------contact      form section-------- */
+
+
+#contact .container .content .form-side{
+
+    flex-basis: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+#form{
+
+   height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+
+}
+
+input {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: rgb(32, 30, 30);
+    color: white;
+}
+
+input::placeholder {
+    color: darkgray;
+}
+
+textarea {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: white;
+    background-color: rgb(32, 30, 30);
+}
+
+textarea::placeholder {
+    color: darkgray;
+}
+
+
+@media only screen and (max-width:1250px) {
+
+    #contact .content {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 10%;
+
+    }
+
+    #contact .form-side {
+        padding: 10%;
+        overflow: hidden;
+    }
+
+}
+
+/* =======================  Footer =================================================> */
+
+footer{
+    
+    padding :10%;
+    background-color: #080808;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 0;
+    padding-bottom: 2%;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+
+footer i{
+    color: #db0b2e;
+}
+
+
+
+#pin{
+ 
+    position: fixed;
+    bottom: 5px;
+    right :5px;
+
+}
+
+
+
+/* ======================================  feed back css: ============================================> */
+
+
+
+feed{
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.outer{
+
+
+    display: flex;
+    height: 40%;
+    border-radius: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+   
+    
+   
+}
+
+.uh{
+    background: linear-gradient(to right, rgba(219, 11, 46, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+
+}
+.n{
+    background: linear-gradient(to right, rgba(219, 11, 46, 1), rgba(219, 11, 46, .3), rgba(0, 0, 0, 1));
+
+}
+
+.h{
+    background: linear-gradient(to right, rgba(219, 11, 46, 1), rgba(219, 11, 46, 1), rgba(255, 0, 0, .2));
+}
+
+.form1
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white;  */
+    padding-bottom: 15px;
+    height: 100%;
+    transition:  transform .5s linear;
+    border: 1px solid white;
+    box-shadow:0px 1px 7px rgba(255,255,255,.6);    
+
+}
+
+.optinos
+{
+    display: flex;
+    padding:10px;
+   
+}
+
+.feed-img{
+    margin-top: 20px;
+    width: 40%;
+    
+}
+
+.icon{
+    padding-top: 5px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius:1px;
+    transition: transform .1s linear;
+}
+
+
+
+.sad:hover 
+{
+ 
+    transform:  translate(0,-5%)  
+    
+}
+.neutral:hover
+{
+
+    transform:  translate(0,-5%);
+}
+.happy:hover
+{
+  
+    transform:  translate(0,-5%);
+}
+
+
+#btn{
+
+    color: black;
+    padding: 9px 15px;
+    background-color:white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn:hover
+{
+    background-color: black;
+    position: relative;
+    top:2px;
+    color: white;
+}
+
+.slide{
+    transform:  translate(0,10%) 
+}
+.flip
+{
+    /* transform:  scaleX(-1);  */
+}
+
+.thankyou
+{
+  inherits:true;
+  color: red;
+  transform: scaleX(-1);
+}
+
+.animation
+{
+    animation-name: sandy;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+@keyframes sandy {
+  0% {  
+
+}
+
+25%
+{
+    scale: -1 1 1 ;
+    rotate: 0deg;
+    translate: 0% 0%;
+}
+40%{
+    scale: -1 1 1;
+    rotate: 0deg;
+    translate: 0% 0%;
+}
+
+100%
+{  
+    scale: -1 1 1 ;
+    rotate: 180deg;
+    translate: 90% 200%;
+}
+
+}
+
+#heading{
+    font-family: cursive;   
+}
+
+#feed{
+    display: none;
+    letter-spacing: 2px;
+}
+
+.color{
+    background-color: #080808;
+}
+
+
+
+
+
